@@ -9,4 +9,4 @@
 - ## Server: Chịu trách nhiệm xử lý dữ liệu, tính toán và lưu trữ thông tin liên quan đến các khoản thanh toán.
 - ## Ứng dụng lương: Thực hiện các quy trình thanh toán tự động và xử lý báo cáo.
 # **Biểu đồ Package mô tả kiến trúc.**
-![PlanText](https://www.planttext.com/api/plantuml/png/R90n3i8m34NtdCBAmjGBCA1MiB0XE86RM3Hg257igaA8ap5m9Av0WoWKmVhVj_ta-_LMic2Ixk1LHDFYda1l4Z45GN77eE6i0DH5VN0LetVcJR_O2WLhPFe1Ep9TSdBAOCXdi2N_NC6DYmmrIKyKuDLdDNM0mXxxK2nWSXdceDT1AA4Hw9qqMatfE37wv7fb33637QB_vT4nbvSDcHPC8ZjOEFIibIefsFoe1m000F__0m00) 
+![PlanText](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bT1Od9sOdggWf9pJcPgNecIGZKNLoqNGZWujQWijGWah004S677WeASpEJ4aipyF0MVn4g82h2IMYvKbIw99Ob9YSMf19G5foQN5cMML2AKAK01L3bG0nUNGsfU2iZLN000003__mC0) 
