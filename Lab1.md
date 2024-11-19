@@ -31,6 +31,7 @@
 - ### BankPayment : Thực hiện thanh toán qua chuyển khoản ngân hàng.
 - ### EmailThanh toán : Gửi phiếu lương qua email.
 ## Biểu đồ Sequence :
+![PlanText]()
 - ### Nhân viên yêu cầu thanh toán.
 - ### Hệ thống tính toán lương theo giờ hoặc lương cố định và hoa hồng.
 - ### Lựa chọn phương thức thanh toán (chuyển tài khoản ngân hàng hoặc email).
@@ -44,28 +45,26 @@
 - ### Nhân viên có quan hệ 1-n với Hệ thống tính lương (mỗi nhân viên có thể có một hoặc nhiều phiếu lương).
 - ### PayrollSystem có mối quan hệ với BankPayment và EmailPayment , tùy chọn theo phương thức thanh toán của nhân viên.
   ### Biểu đồ lớp : Biểu đồ lớp sẽ mô tả các lớp trên, với các thuộc tính và phương thức của từng lớp, đồng thời chỉ ra các quan hệ giữa chúng.
-# **Biểu đồ lớp mô tả lớp phân tích**
+
+
+# **4. Phân Tích Ca Sử Dụng Duy Trì Timecard **
+## Các lớp phân tích cho ca sử dụng Maintenance Timecard :
+- ### Nhân viên : Đại diện cho nhân viên, có thuộc tính như nhân viênId, tên, timecardEntries.
+- ### Timecard : Lưu trữ các bản ghi thời gian làm việc của nhân viên, có thuộc tính như ngày, giờĐã làm việc.
+- ### TimecardSystem : Xử lý các thao tác nhập, sửa và xem bảng chấm công.
+## Biểu đồ Sequence :
 ![PlanText]()
-# 3. Thanh toán Phân Tích Ca Sử Dụng
-## Các lớp phân tích cho ca sử dụng Payment :
-- ## Nhân viên : Đại diện cho nhân viên, có thuộc tính như characterId, name, PaymentMethod, HourlyRate, CommissionRate, vv
-- ## Hệ thống tính lương : Xử lý tính toán lương, bao gồm các phương thức như tính toánHourlyPayment(), tính toánFixedPayment(), generatePayslip().
-- ## BankPayment : Thực hiện thanh toán qua chuyển khoản ngân hàng.
-- ## EmailThanh toán : Gửi phiếu lương qua email.
- ## Biểu đồ Sequence :
-- ## Nhân viên yêu cầu thanh toán.
-- ## Hệ thống tính toán lương theo giờ hoặc lương cố định và hoa hồng.
-- ## Lựa chọn phương thức thanh toán (chuyển tài khoản ngân hàng hoặc email).
-- ## Hệ thống thực hiện thanh toán và tạo phiếu lương.
- ## Nhiệm vụ của từng lớp :
-- ## Nhân viên : Cung cấp thông tin về nhân viên và phương thức thanh toán.
-- ## Hệ thống lương : Thực hiện các phép tính lương và hoa hồng, tạo phiếu lương.
-- ## Thanh toán ngân hàng : Chịu trách nhiệm chuyển tiền vào tài khoản ngân hàng.
-- ## EmailThanh toán : Gửi phiếu lương qua email.
- ## Thuộc tính và quan hệ :
-- ## Nhân viên có quan hệ 1-n với Hệ thống tính lương (mỗi nhân viên có thể có một hoặc nhiều phiếu lương).
-- ## PayrollSystem có mối quan hệ với BankPayment và EmailPayment , tùy chọn theo phương thức thanh toán của nhân viên.
-## Biểu đồ lớp : Biểu đồ lớp sẽ mô tả các lớp trên, với các thuộc tính và phương thức của từng lớp, đồng thời chỉ ra các quan hệ giữa chúng.
-![PlanText]()
+- ### Nhân viên nhập thông tin về giờ làm việc vào bảng chấm công.
+- ### Kiểm tra hệ thống và lưu thông tin vào TimecardSystem .
+- ### Quản trị viên có thể thay đổi hoặc duyệt bảng chấm công.
+- ### Nhiệm vụ của từng lớp :
+- ### Nhân viên : Nhập thông tin giờ làm vào bảng chấm công.
+- ### TimecardSystem : Kiểm tra và lưu trữ bảng chấm công thông tin, thực hiện các thao tác như chỉnh sửa và xóa.
+- ### Timecard : Lưu trữ thông tin chi tiết về thời gian làm việc.
+- ### Thuộc tính và quan hệ :
+- ### Nhân viên có quan hệ 1-n với Timecard ( mỗi nhân viên có nhiều bản ghi thời gian).
+- ### TimecardSystem xử lý các thao tác với Timecard .
+
 # **5. Hợp nhất kết quả phân tích**
+
 ![PlanText]()
