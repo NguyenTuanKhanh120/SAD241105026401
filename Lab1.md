@@ -31,7 +31,8 @@
 - ### BankPayment : Thực hiện thanh toán qua chuyển khoản ngân hàng.
 - ### EmailThanh toán : Gửi phiếu lương qua email.
 ## Biểu đồ Sequence :
-![PlanText]()
+![PlanText](https://www.planttext.com/api/plantuml/png/L95DJiGm34RtEOKrArXKx2k4HaKHsuXo0TEw8iBv8KubUZOM78ahaBGTcAxzlkTypi_NzraofZmxLZZaa42xo64X0XJGAfQP7Mn4d-5aS4c16Vf5ChbJ9Kn_H3hqxr0uHpwlG6UEW7Pe-K1eevI6vg6uMdYcZvaaGzm0PVhBv15vc1apWI1ZMk3cBSo9bxl9Vj8804DmpehOu6yLSeRrAIy9lKoKL05WatMc1PF2G2BmMfbypNG6cdtZ9LlCVhB9qQY8XM2jS2NKHTYJ7-kZXMq4-WFqlsqhBhLKOVTYkeKdyfHghJrTRd7VD6jalr9j5fbosNykqVfLlm000F__0m00)
+## Phân Tích Biểu Đồ Sequence "Select Payment" 
 - ### Nhân viên yêu cầu thanh toán.
 - ### Hệ thống tính toán lương theo giờ hoặc lương cố định và hoa hồng.
 - ### Lựa chọn phương thức thanh toán (chuyển tài khoản ngân hàng hoặc email).
@@ -47,13 +48,14 @@
   ### Biểu đồ lớp : Biểu đồ lớp sẽ mô tả các lớp trên, với các thuộc tính và phương thức của từng lớp, đồng thời chỉ ra các quan hệ giữa chúng.
 
 
-# **4. Phân Tích Ca Sử Dụng Duy Trì Timecard **
+# **4. Phân Tích Ca Sử Dụng Duy Trì Timecard**
 ## Các lớp phân tích cho ca sử dụng Maintenance Timecard :
 - ### Nhân viên : Đại diện cho nhân viên, có thuộc tính như nhân viênId, tên, timecardEntries.
 - ### Timecard : Lưu trữ các bản ghi thời gian làm việc của nhân viên, có thuộc tính như ngày, giờĐã làm việc.
 - ### TimecardSystem : Xử lý các thao tác nhập, sửa và xem bảng chấm công.
 ## Biểu đồ Sequence :
-![PlanText]()
+![PlanText](https://www.planttext.com/api/plantuml/png/R95DRW8n34RtEON5YagCsAEgObJD1HZeFagCi9gVKU8CojbOz4YzGfFEC2nWw-_vENP-Rp_xo39miaP8nJv0PmVZCoB82DrSQxKbLmkj60fCYWRf65P7igXaqD3do6XN5Jb-zg-XEHMYW-QZOZle76E0gm_VSF4fH2377dXk48LPq2zfI4l69GLq7FA3sK5VdZhbKmRhsh2PrNKAwZVHBie3ZeHNAFjPh-cSNmok40V24RUduNayOQo-kx2N8qukGlsmbONVcsP2bekbVvs6c9J26C_9c2psw7JzYJy0003__mC0)
+## Phân Tích Biểu Đồ Sequence "Select Payment"
 - ### Nhân viên nhập thông tin về giờ làm việc vào bảng chấm công.
 - ### Kiểm tra hệ thống và lưu thông tin vào TimecardSystem .
 - ### Quản trị viên có thể thay đổi hoặc duyệt bảng chấm công.
