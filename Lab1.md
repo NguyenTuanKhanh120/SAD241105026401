@@ -76,5 +76,5 @@
 ## Hợp nhất các kết quả phân tích:
 ### Hai ca sử dụng trên đều nhằm mục đích xử lý các yếu tố liên quan đến việc thanh toán lương cho nhân viên, nhưng với các chức năng riêng biệt:
 - #### Ca "Select Payment" tập trung vào việc xử lý yêu cầu thanh toán của nhân viên, với các phương thức thanh toán khác nhau (chuyển khoản, bưu điện, nhận trực tiếp).
-- #### Ca "Maintain Timecard" giúp hệ thống quản lý và tính toán thời gian làm việc, từ đó xác định số tiền lương phải trả cho nhân viên, dựa trên thời gian và phương thức thanh toán. Cả hai ca sử dụng này đều có sự liên kết chặt chẽ với các lớp phân tích
+- #### Ca "Maintain Timecard" giúp hệ thống quản lý và tính toán thời gian làm việc, từ đó xác định số tiền lương phải trả cho nhân viên, dựa trên thời gian và phương thức thanh toán. 
 ![PlanText](https://www.planttext.com/api/plantuml/png/X5HBJiCm4Dtd57C1nBvIKG4LnAvguG23CrMj-XCyqrOv6mkEn1MmqoIAqxJi4izxyzuRJ_Bx_RDWmI07QmfKuWCiRMLyJTI-FfPMkwAA4ArqXKxWNLjI6CfDpK9sifGThh0EtfW9-1EwVQnQSfATBorgqnMA-Rpt1F600iF9Xpti_24-QYSUfDM5-RpeiNSF8wimWsNY3-Z5237WHFG6ZvHhRNsmADgxnbQR3FXCLcZKmQ0G0wF1K8_jP9E8_TVqTI0MgDgeUNtA_veaQ8gk-iGb2jvEyKAYTiFC5p9ZNyzTa8PWQa1NWlBMQkQOlVCxqQbFEuDNSXHIZuXcewjkOea9bcJdIs0ofD8u_vlKfW5smYtzKdwmK97qjXqHG3DyHWX8GCTR2iMGaDjV1Q-8-VhT39VqcXWbJ94XSvKDnScs0uAZnfQHHjLyU13egEd4pGrGgOMpNJzZfXSbyUwNaT8pRg_9HrMcs-hRPyk-Y3xJB-8F003__mC0)
