@@ -47,7 +47,6 @@
 - ### PayrollSystem có mối quan hệ với BankPayment và EmailPayment , tùy chọn theo phương thức thanh toán của nhân viên.
   ### Biểu đồ lớp : Biểu đồ lớp sẽ mô tả các lớp trên, với các thuộc tính và phương thức của từng lớp, đồng thời chỉ ra các quan hệ giữa chúng.
 
-
 # **4. Phân Tích Ca Sử Dụng Duy Trì Timecard**
 ## Các lớp phân tích cho ca sử dụng Maintenance Timecard :
 - ### Nhân viên : Đại diện cho nhân viên, có thuộc tính như nhân viênId, tên, timecardEntries.
@@ -55,7 +54,7 @@
 - ### TimecardSystem : Xử lý các thao tác nhập, sửa và xem bảng chấm công.
 ## Biểu đồ Sequence :
 ![PlanText](https://www.planttext.com/api/plantuml/png/R95DRW8n34RtEON5YagCsAEgObJD1HZeFagCi9gVKU8CojbOz4YzGfFEC2nWw-_vENP-Rp_xo39miaP8nJv0PmVZCoB82DrSQxKbLmkj60fCYWRf65P7igXaqD3do6XN5Jb-zg-XEHMYW-QZOZle76E0gm_VSF4fH2377dXk48LPq2zfI4l69GLq7FA3sK5VdZhbKmRhsh2PrNKAwZVHBie3ZeHNAFjPh-cSNmok40V24RUduNayOQo-kx2N8qukGlsmbONVcsP2bekbVvs6c9J26C_9c2psw7JzYJy0003__mC0)
-## Phân Tích Biểu Đồ Sequence "Select Payment"
+## Phân Tích Biểu Đồ Sequence "Maintain Timecard"
 - ### Nhân viên nhập thông tin về giờ làm việc vào bảng chấm công.
 - ### Kiểm tra hệ thống và lưu thông tin vào TimecardSystem .
 - ### Quản trị viên có thể thay đổi hoặc duyệt bảng chấm công.
@@ -69,4 +68,4 @@
 
 # **5. Hợp nhất kết quả phân tích**
 
-![PlanText]()
+![PlanText](https://www.planttext.com/api/plantuml/png/X5HBJiCm4Dtd57C1nBvIKG4LnAvguG23CrMj-XCyqrOv6mkEn1MmqoIAqxJi4izxyzuRJ_Bx_RDWmI07QmfKuWCiRMLyJTI-FfPMkwAA4ArqXKxWNLjI6CfDpK9sifGThh0EtfW9-1EwVQnQSfATBorgqnMA-Rpt1F600iF9Xpti_24-QYSUfDM5-RpeiNSF8wimWsNY3-Z5237WHFG6ZvHhRNsmADgxnbQR3FXCLcZKmQ0G0wF1K8_jP9E8_TVqTI0MgDgeUNtA_veaQ8gk-iGb2jvEyKAYTiFC5p9ZNyzTa8PWQa1NWlBMQkQOlVCxqQbFEuDNSXHIZuXcewjkOea9bcJdIs0ofD8u_vlKfW5smYtzKdwmK97qjXqHG3DyHWX8GCTR2iMGaDjV1Q-8-VhT39VqcXWbJ94XSvKDnScs0uAZnfQHHjLyU13egEd4pGrGgOMpNJzZfXSbyUwNaT8pRg_9HrMcs-hRPyk-Y3xJB-8F003__mC0)
