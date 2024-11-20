@@ -72,8 +72,8 @@
 ### 1. Ca Sử Dụng: Select Payment
 #### Mô tả: Ca sử dụng này mô tả quy trình tính toán lương và thực hiện thanh toán cho nhân viên, bao gồm các bước từ việc tính toán lương đến việc lựa chọn phương thức thanh toán (chuyển khoản ngân hàng hoặc qua email).
 ## 2. Ca Sử Dụng: Maintain Timecard
-### Mô tả: Ca sử dụng này mô tả quá trình quản lý bảng chấm công của nhân viên, từ việc nhập giờ làm việc đến việc sửa chữa và duyệt bảng chấm công.
-## Hợp nhất các kết quả phân tích:
+#### Mô tả: Ca sử dụng này mô tả quá trình quản lý bảng chấm công của nhân viên, từ việc nhập giờ làm việc đến việc sửa chữa và duyệt bảng chấm công.
+### Hợp nhất các kết quả phân tích:
 ### Hai ca sử dụng trên đều nhằm mục đích xử lý các yếu tố liên quan đến việc thanh toán lương cho nhân viên, nhưng với các chức năng riêng biệt:
 - #### Ca "Select Payment" tập trung vào việc xử lý yêu cầu thanh toán của nhân viên, với các phương thức thanh toán khác nhau (chuyển khoản, bưu điện, nhận trực tiếp).
 - #### Ca "Maintain Timecard" giúp hệ thống quản lý và tính toán thời gian làm việc, từ đó xác định số tiền lương phải trả cho nhân viên, dựa trên thời gian và phương thức thanh toán.
