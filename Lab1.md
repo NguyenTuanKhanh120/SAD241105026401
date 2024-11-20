@@ -9,7 +9,7 @@
 - ### Client: Cung cấp giao diện đơn giản và an toàn cho nhân viên để tương tác với hệ thống.
 - #### Server: Chịu trách nhiệm xử lý dữ liệu, tính toán và lưu trữ thông tin liên quan đến các khoản thanh toán.
 - #### Ứng dụng lương: Thực hiện các quy trình thanh toán tự động và xử lý báo cáo.
-## **Biểu đồ Sequence **
+## **Biểu đồ Package **
 ![PlanText](https://www.planttext.com/api/plantuml/png/UhzxlqDnIM9HIMbk3bT1Od9sOdggWf9pJcPgNecIGZKNLoqNGZWujQWijGWah004S677WeASpEJ4aipyF0MVn4g82h2IMYvKbIw99Ob9YSMf19G5foQN5cMML2AKAK01L3bG0nUNGsfU2iZLN000003__mC0) 
 
 ## **2. Cơ Chế Phân Tích**
