@@ -1,47 +1,39 @@
-## Phân tích tất cả các ca sử dụng còn lại trong hệ thống Payroll System.
-### *1.Login*
-### Mục đích: Cho phép người dùng đăng nhập vào hệ thống Payroll.
-### Các bước chính:
-- #### Người dùng nhập tên và mật khẩu.
-- #### Hệ thống kiểm tra thông tin đăng nhập và xác thực người dùng.
-- #### Luồng thay thế: Nếu thông tin không hợp lệ, hiển thị thông báo lỗi.
-### *2. Maintain Employee Information*
-### Mục đích: Cho phép Quản trị viên Payroll thêm, cập nhật hoặc xóa thông tin nhân viên.
-### Các bước chính:
-- #### Chọn chức năng cần thực hiện (Thêm, Cập nhật, Xóa).
-- #### Nhập thông tin cần thiết.
-- #### Hệ thống xử lý và lưu trữ thay đổi.
-- #### Luồng thay thế: Hiển thị thông báo nếu nhân viên không tồn tại hoặc việc xóa bị hủy.
-### *3. Create Administrative Report*
-### Mục đích: Cho phép Quản trị viên Payroll tạo báo cáo tổng giờ làm hoặc lương năm đến thời điểm hiện tại.
-### Các bước chính:
-- #### Chọn loại báo cáo và cung cấp các tiêu chí (khoảng thời gian, tên nhân viên).
-- #### Hệ thống tạo báo cáo dựa trên tiêu chí được nhập.
-- #### Người dùng có thể lưu báo cáo.
-- #### Luồng thay thế: Thông báo nếu thông tin không đủ hoặc định dạng không hợp lệ.
-### *4. Create Employee Report*
-### Mục đích: Nhân viên tự tạo các báo cáo cá nhân, ví dụ: tổng giờ làm, thời gian nghỉ phép.
-### Các bước chính:
-- #### Chọn loại báo cáo (Tổng giờ làm, Dự án cụ thể, Nghỉ phép/Số ngày bệnh, Lương năm-to-date).
-- #### Nhập tiêu chí thời gian và chọn số dự án (nếu cần).
-- #### Nhận báo cáo và lưu lại nếu muốn.
-- #### Luồng thay thế: Hiển thị lỗi nếu thông tin không đầy đủ.
-### *5. Run Payroll*
-### Mục đích: Hệ thống tự động tính toán và xử lý trả lương vào các ngày cụ thể.
-### Các bước chính:
-- #### Lấy danh sách nhân viên cần trả lương.
-- #### Tính toán lương dựa trên thời gian làm việc, đơn đặt hàng, thông tin nhân viên, và khấu trừ.
-- #### In hoặc gửi tiền vào tài khoản ngân hàng.
-- #### Luồng thay thế: Hệ thống cố gắng gửi lại giao dịch ngân hàng nếu hệ thống ngân hàng không khả dụng.
-### *6. Maintain Purchase Order*
-### Mục đích: Nhân viên hoa hồng thêm, cập nhật, hoặc xóa đơn đặt hàng để nhận tiền hoa hồng.
-### Các bước chính:
-- #### Chọn chức năng (Tạo, Cập nhật, Xóa).
-- #### Nhập thông tin đơn đặt hàng.
-- #### Hệ thống xử lý thay đổi.
-- #### Luồng thay thế: Báo lỗi nếu thông tin đơn đặt hàng không hợp lệ hoặc đã bị đóng.
-
-## *2. Mô phỏng Java cho ca sử dụng Maintain Timecard*
+## Tổng hợp các ca sử dụng chính:
+- ### Employee
+- ### Timecard
+- ### Paycheck
+- ### PurchaseOder
+- ### ProjectManagementDatabase
+- ### BankSystem
+## *I.Phân tích tất cả các ca sử dụng còn lại trong hệ thống Payroll System.*
+### *1. Paycheck (Bảng lương)*
+### Bảng lương là kết quả của việc tính toán tiền lương dựa trên số giờ làm việc, lương cơ bản và các khoản hoa hồng. Bảng lương có thể được tạo và phân phối cho nhân viên vào các kỳ thanh toán định kỳ.
+### Ca sử dụng:
+- ### Run Payroll: Hệ thống tự động tính toán bảng lương cho tất cả nhân viên vào mỗi kỳ thanh toán (thứ Sáu hoặc cuối tháng). Hệ thống sử dụng thông tin từ bảng chấm công, đơn hàng mua (với nhân viên nhận hoa hồng), và các thông tin khác để tính toán.
+- ### Generate Paycheck: Dựa trên các yếu tố như giờ làm việc, tỷ lệ lương, và hoa hồng (nếu có), hệ thống sẽ tạo bảng lương cho từng nhân viên và chuyển chúng đến hệ thống ngân hàng (cho các nhân viên chọn phương thức thanh toán chuyển khoản).
+### Biểu đồ Sequence: 
+![PlanText]()
+### *2. PurchaseOrder (Đơn hàng)*
+### Đơn hàng là đối tượng được sử dụng bởi nhân viên có hoa hồng (Commissioned Employees) để ghi nhận các giao dịch bán hàng. Mỗi đơn hàng có thể được dùng để tính toán hoa hồng cho nhân viên.
+### Ca sử dụng:
+- ### Maintain Purchase Order: Nhân viên bán hàng có thể tạo, chỉnh sửa hoặc xóa các đơn hàng mà họ đã thực hiện trong hệ thống. Thông tin về khách hàng, sản phẩm bán, và ngày thực hiện sẽ được ghi lại.
+- ### Calculate Commission: Các đơn hàng bán sẽ được dùng để tính hoa hồng cho nhân viên bán hàng. Tỷ lệ hoa hồng có thể dao động từ 10% đến 35% tùy theo chính sách của công ty.
+### Biểu đồ Sequence: 
+![PlanText]()
+### *3. ProjectManagementDatabase (Cơ sở dữ liệu quản lý dự án)*
+### Cơ sở dữ liệu này lưu trữ thông tin về các dự án, mã công việc, và các chi tiết liên quan. Các thông tin này sẽ được sử dụng trong bảng chấm công để phân bổ giờ làm việc cho các dự án cụ thể.
+### Ca sử dụng:
+- ### Maintain Timecard: Khi nhân viên ghi nhận giờ làm việc vào bảng chấm công, hệ thống sẽ lấy danh sách các mã công việc (charge number) từ cơ sở dữ liệu quản lý dự án để nhân viên có thể chọn mã phù hợp cho công việc mà họ đã làm.
+### Biểu đồ Sequence: 
+![PlanText]()
+### *4. BankSystem (Hệ thống ngân hàng)*
+### Hệ thống ngân hàng xử lý các giao dịch thanh toán cho nhân viên, đặc biệt là những nhân viên chọn phương thức thanh toán chuyển khoản trực tiếp.
+### Ca sử dụng:
+- ### Run Payroll: Sau khi tính toán bảng lương, hệ thống sẽ gửi thông tin thanh toán cho ngân hàng để xử lý các giao dịch chuyển khoản cho nhân viên chọn phương thức này.
+- ### Process Payment: Hệ thống ngân hàng nhận thông tin từ hệ thống Payroll và thực hiện các giao dịch thanh toán cho nhân viên qua chuyển khoản ngân hàng.
+### Biểu đồ Sequence: 
+![PlanText]()
+## *II. Mô phỏng Java cho ca sử dụng Maintain Timecard*
 ```markdown
 ```java
 class Timecard {
