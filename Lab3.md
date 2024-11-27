@@ -70,6 +70,7 @@
 - #### ProjectManagementDatabase -> ProjectData (Trả về thông tin dự án)
 - #### PayrollController sử dụng ProjectData cho các mục đích liên quan đến bảng lương và quản lý tài chính.
 # *2.Analysis class to design element map*
+
 ### Mapping Analysis Classes to Design Elements
 
 | **Analysis Class**          | **Design Element**               | **Description** |
@@ -84,7 +85,7 @@
 | **IPrintService**            | Interface                        | Interface providing printing functionalities in the system. |
 | **IProjectDatabase**         | Interface                        | Interface providing functionalities to query project information. |
 
-## **3. Design element to owning package map**
+# **3. Design element to owning package map**
 
 ### Mapping Design Elements to Owning Packages
 
@@ -100,5 +101,5 @@
 | **IPrintService**                |  interfaces             | 
 | **IProjectDatabase**             |  interfaces             | 
 
-## **4. Architectural layers and their dependencies**
+# **4. Architectural layers and their dependencies**
 ![PlanText](https://www.planttext.com/api/plantuml/png/X59BJiCm4Dtx54Cth7g1Bb1_4Pk0AW8769nfCNNioEDKYe2JiU18N04xAKb_KRsnv9dtbN-_VwRiqVcgqE8cfxKo14_9uddsU9yc83Ko2t4BotQYiIR7eaIvnGt1QEM8oNZqoXf8ut047mB2wJbMM3khzS8Q7szoualq3FEA0p4pf7QZv227KyPdv7PAqibeZcQRrUofECFOTvB-0KqGAeBB9NfyHQOZ_VW8CoaR2vV5awBKjgPJuP2BjIeZMzUF8zrqmM-gP76M7CRZpxkZC3215wR1rJxSbSN1i1tkKBIt4V0JoCZa37bimbjneDdi_SSFYq4b5aKCPMj33EjUmEvK7g4jfD6xXjztl0_HGPLPss0L96fPXSP9J4E4-8N_0000__y30000")
