@@ -8,15 +8,15 @@
     - #### Số tiền thanh toán.
     - #### Tài khoản ngân hàng của người nhận.
     - #### Các chi tiết giao dịch liên quan.
-### 3. **Xử lý thanh toán (Payment Processing):**
+### 2. **Xử lý thanh toán (Payment Processing):**
 - #### Xác thực thông tin giao dịch.
 - #### Thực hiện giao dịch qua ngân hàng.
-#### 4. **Cung cấp số dư tài khoản (Account Balance):**
+#### 3. **Cung cấp số dư tài khoản (Account Balance):**
 - #### Cung cấp thông tin số dư tài khoản cho các hệ thống liên quan để báo cáo và kiểm tra.
-## 5. **Gửi sao kê ngân hàng (Bank Statements):**
+## 4. **Gửi sao kê ngân hàng (Bank Statements):**
 - #### Tạo sao kê chi tiết về các giao dịch đã xử lý.
 - #### Gửi sao kê đến các hệ thống khác, như dịch vụ in ấn (PrintService).
-- 
+  
 ## Biểu đồ ngữ cảnh của hệ thống con BankSystem.
 ![PlanText](https://www.planttext.com/api/plantuml/png/pLEnJiCm4Dqj-H-iCj0CKVSgYaeHGoI6YaoCnhYjXMD7lWiG0V-ExP8qRWipsvtzxkwzy_CAa3li6at9DRkr1ftreT0SWCqslFUfhdj0sSmO1vQSiA8GXugoP1-KCBPOC93cEU8QQP1L1j1r0fKrGCaN9M5CPL2wBHUI4ZM4h5fpyr9BzwfyKXGZPcZTEYiam4_ZEPzqPijXtkGm2qKxYJT2sCxWccjkX9nd7fmU1LmWNIFtccBlCVJWI6l8ir53tJt1OGaRPz_xSMKHVjpNCVMQOAnfGurNTdMlTdjyb5hRjtyfyywWmb7T-NYlIaP8MPw0l9UsoZNy5rHAxW8W8PJS1ruFKiVEi5UjDrPgopmlKpij_tHbwhpFF9-y6YMJ5mnzBwWxmvmk_kGwKKR9obEB_-yR "BankSystem")
 
@@ -38,7 +38,7 @@
 # **PrintService**
 #### PrintService là một hệ thống con trong Payroll System, chịu trách nhiệm xử lý các yêu cầu in ấn. Cụ thể, nó đảm nhận việc nhận tài liệu cần in (như phiếu lương Payslip) và tương tác với máy in để hoàn tất quá trình in.
 ### Biểu đồ ngữ cảnh của hệ thống con PrintService
- ![PlanText](https://www.planttext.com/api/plantuml/png/h5B1JiCm3BtdAwnnO4XKkrTHDGauJE8mRIUEeHWMAKrAx0uguCiuy4dy0ccRL7IzxlRyx6S_E_dz_baJAyzDPSGbt3ZBtXbH6aK4YwrgGsGYQz0lG17CM92o78AYW0y1i5f1xLs9H5klBU_mjK7YvPNu4c78nZBwPrMYq0d1fY_Sep_g44avriIETPU-TMLJeUMbIWXoIF0QdEsR13yvH1Gdxfj7Qecn2hnxRyVr_iqSDfkQe55MTx9WvU9Ulnpu0OrnRsVmTMTPSx8pQgN4dY-Ac8cYJh53erWxImTTavY_H9OL9xVCWT0-qU0K_F0K14UjnCdHFxDiSW4nINUTayLv9bbSXrdTL_e3003__mC0 "PrintService")
+ ![PlanText](https://www.planttext.com/api/plantuml/png/Z9DDRi8m48NtEOML5KWD1uYgYWLTP8UK4mpEG2qSEx8d4QZbP5rm9AvGvyUDGr2fLoFFyyoNDvFRztLj2GpLfOmgu4Su88lpUcVFbh1aMwDFvvXzHimTBi5QToKKvMWQmN58zATg4nlDwn8LBOeXI9c_UkaLQDA-1ffboXejYg06_q1-x3iGK6qNmvEiI5bEBZuiVT2zkaINQEH-LoJe3jTtdw1wkB5ioA1TnnPybjbhKy8yaIH986f0YW88Vvrmn3kj9O8QaE_DH3FtCVpa86SxLnuafEP0GgidSCzc54vawctMCks1exTN-0kM_NCbOFDW9xJQ_h4L7SEaV9AyZJDDMLmPpT5QjF5SvzrrihfJJ4bVlrQhwJexeIWhYMrn9r-ZAjeVumS00F__0m00")
 ### Interface: là giao diện trung gian cho phép các hệ thống khác tương tác với hệ thống PrintService để yêu cầu in tài liệu. Giao diện này định nghĩa các phương thức mà PrintService phải thực hiện để xử lý yêu cầu in.
 ### Phương thức 
 ##### printDocument(aDocument: Document, onPrinter: Printer): Phương thức này nhận tài liệu cần in và máy in để gửi tài liệu đến máy in.
@@ -73,33 +73,49 @@
 
 ### Mapping Analysis Classes to Design Elements
 
-| **Analysis Class**          | **Design Element**               | **Description** |
-|-----------------------------|----------------------------------|-----------------|
-| **PayrollController**        | Controller                       | Coordinates the processing of requests in the system.      |
-| **Employee**                 | Entity                           | Represents employee data and information.                  |
-| **Payslip**                  | Entity                           | Represents employee payslips, storing payment details and salary breakdowns.   |
-| **Printer**                  | Entity                           | Represents the printer for handling print jobs.            |
-| **PrintService**             | Subsystem Proxy                  | Subsystem responsible for handling print requests from the Payroll System. |
-| **BankSystem**               | Subsystem Proxy                  | Subsystem responsible for processing banking transactions. |
-| **ProjectManagementDatabase**| Subsystem Proxy                  | Subsystem providing project and charge code information.   |
-| **IPrintService**            | Interface                        | Interface providing printing functionalities in the system. |
-| **IProjectDatabase**         | Interface                        | Interface providing functionalities to query project information. |
+| **Analysis Class**             | **Design Element**              |
+|--------------------------------|---------------------------------|
+| **LoginForm**                  | **LoginForm**                   |
+| **MaintainTimecardForm**       | **MainEmployeeForm**            |
+|                                | **TimecardForm**                |
+|                                |  **MainApplicationForm**        |
+| **TimecardController**         | **TimecardController**          |
+| **SystemClockInterface**       | **SystemClockInterface**        |
+| **PayrollController**          | **PayrollController**           |
+| **Paycheck**                   | **Paycheck**                    |
+| **PaymentInstruction**         | **PaymentInstruction**          |
+| **Employee**                   | **Employee**                    |
+| **IEmployeeRepository**        | **IEmployeeRepository**         |
+| **IPaymentRepository**         | **IPaymentRepository**          |
+| **BankSystem**                 | **BankSystem**                  |
+| **IBankSystem**                | **IBankSystem**                 |
+| **ProjectManagementDatabase**  | **ProjectManagementDatabase**   |
+| **IProjectDatabase**           | **IProjectDatabase**            |
+| **ProjectData**                | **ProjectData**                 |
 
 # **3. Design element to owning package map**
 
 ### Mapping Design Elements to Owning Packages
 
-| **Design Element**               | **Owning Package**      |                                                                
-|----------------------------------|-------------------------|
-| **PayrollController**            |  controller             | 
-| **Employee**                     |  entity                 | 
-| **Payslip**                      |  entity                 |
-| **Printer**                      |  entity                 |
-| **PrintService**                 |  subsystem.print        | 
-| **BankSystem**                   |  subsystem.bank         |
-| **ProjectManagementDatabase**    |  subsystem.database     | 
-| **IPrintService**                |  interfaces             | 
-| **IProjectDatabase**             |  interfaces             | 
+
+| **Design Element**        | **"Owning" Package**                        |
+|---------------------------|--------------------------------------------|
+| **UserInterface**          | Middleware::Presentation::GUI Framework    |
+| **PayrollController**      | Applications::Payroll::BusinessLogic       |
+| **TimecardController**     | Applications::Payroll::BusinessLogic       |
+| **EmployeeRepository**     | DataAccess::Employee::Repository           |
+| **PaymentRepository**      | DataAccess::Payment::Repository            |
+| **Database**               | DataAccess::Database::Connection           |
+| **Paycheck**               | BusinessServices::Payroll::Artifacts       |
+| **PaymentInstruction**     | BusinessServices::Payroll::Artifacts       |
+| **IEmployeeRepository**    | Interfaces::Employee::RepositoryInterface  |
+| **IPaymentRepository**     | Interfaces::Payment::RepositoryInterface   |
+| **IBankSystem**            | Interfaces::Bank::SystemInterface          |
+| **IProjectDatabase**       | Interfaces::Project::DatabaseInterface     |
+| **BankSystem**             | Subsystems::Bank::PaymentProcessing        |
+| **ProjectManagementDatabase** | Subsystems::Project::DatabaseManagement |
+| **ProjectData**            | BusinessServices::Project::DataArtifacts   |
+
 
 # **4. Architectural layers and their dependencies**
 ![PlanText](https://www.planttext.com/api/plantuml/png/X59BJiCm4Dtx54Cth7g1Bb1_4Pk0AW8769nfCNNioEDKYe2JiU18N04xAKb_KRsnv9dtbN-_VwRiqVcgqE8cfxKo14_9uddsU9yc83Ko2t4BotQYiIR7eaIvnGt1QEM8oNZqoXf8ut047mB2wJbMM3khzS8Q7szoualq3FEA0p4pf7QZv227KyPdv7PAqibeZcQRrUofECFOTvB-0KqGAeBB9NfyHQOZ_VW8CoaR2vV5awBKjgPJuP2BjIeZMzUF8zrqmM-gP76M7CRZpxkZC3215wR1rJxSbSN1i1tkKBIt4V0JoCZa37bimbjneDdi_SSFYq4b5aKCPMj33EjUmEvK7g4jfD6xXjztl0_HGPLPss0L96fPXSP9J4E4-8N_0000__y30000")
