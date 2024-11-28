@@ -45,13 +45,9 @@
 - #### aDocument (Document): Tài liệu cần in (ví dụ: phiếu lương).
 - #### onPrinter (Printer): Máy in cụ thể nơi tài liệu sẽ được gửi đến.
 ### Mô tả giao tiếp
-- #### PayrollController gửi yêu cầu in phiếu lương (hoặc tài liệu khác) thông qua IPrintService.
-  - #### Giao tiếp: PayrollController yêu cầu IPrintService thực hiện phương thức printDocument.
-- #### IPrintService là giao diện, và phương thức printDocument sẽ được hiện thực trong lớp PrintService.
-  - #### Giao tiếp: IPrintService gọi đến PrintService để thực hiện hành động in tài liệu.
-- #### PrintService thực hiện in tài liệu vào máy in cụ thể (Printer).
-  - #### Giao tiếp: PrintService sử dụng đối tượng Printer để thực hiện thao tác in tài liệu.
-- #### Sau khi in xong, PrintService trả kết quả cho PayrollController, thông báo về trạng thái việc in (thành công, lỗi, v.v.).
+- #### User → PrintService: Người dùng gửi lệnh yêu cầu in phiếu lương (Print Payslip).
+- #### Payroll System → PrintService: Cung cấp dữ liệu phiếu lương cần in.
+- #### PrintService → Printer: Truyền tài liệu (Document) và lệnh in đến máy in cụ thể (Printer).
 
 # **ProjectManagementDatabase subsystems**
 #### ProjectManagementDatabase subsystems là một hệ thống con trong hệ thống tổng thể, có vai trò cung cấp thông tin liên quan đến các dự án và các mã chi phí cho hệ thống Payroll. Đây là một cơ sở dữ liệu lưu trữ thông tin về các dự án đang thực hiện, các chi phí, và các dữ liệu liên quan, giúp Payroll System tính toán bảng lương chính xác.
