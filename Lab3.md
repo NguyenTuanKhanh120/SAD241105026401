@@ -11,9 +11,9 @@
 ### 2. **Xử lý thanh toán (Payment Processing):**
 - #### Xác thực thông tin giao dịch.
 - #### Thực hiện giao dịch qua ngân hàng.
-#### 3. **Cung cấp số dư tài khoản (Account Balance):**
+### 3. **Cung cấp số dư tài khoản (Account Balance):**
 - #### Cung cấp thông tin số dư tài khoản cho các hệ thống liên quan để báo cáo và kiểm tra.
-## 4. **Gửi sao kê ngân hàng (Bank Statements):**
+### 4. **Gửi sao kê ngân hàng (Bank Statements):**
 - #### Tạo sao kê chi tiết về các giao dịch đã xử lý.
 - #### Gửi sao kê đến các hệ thống khác, như dịch vụ in ấn (PrintService).
   
