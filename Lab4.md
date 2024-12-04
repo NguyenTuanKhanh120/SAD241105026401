@@ -76,7 +76,7 @@
 - #### Việc in phiếu lương cung cấp bằng chứng rõ ràng về các khoản thanh toán cho nhân viên.
 - #### Sử dụng giao diện `IPrintService` đảm bảo khả năng tương thích với nhiều loại máy in khác nhau.
 - #### Quản lý lỗi kết nối máy in giúp người dùng nhanh chóng phát hiện và sửa chữa vấn đề.
-## 2 Giải thích tổng hợp các ca sử dụng
+## 2. Giải thích tổng hợp các ca sử dụng
 # Lý do thiết kế hệ thống
 - #### Tính toàn vẹn dữ liệu
   - #### Mỗi ca sử dụng đều bao gồm bước xác thực và kiểm tra tính hợp lệ, đảm bảo dữ liệu được xử lý chính xác.
